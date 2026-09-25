@@ -4,10 +4,13 @@ import { Button } from '../shared';
 import { UploadStep } from '../features/upload';
 import type { UploadedImage } from '../features/upload';
 import { SceneListStep, toScenes } from '../features/scenes';
+import { VoiceoverStep } from '../features/voiceover';
+import type { UploadedAudio } from '../features/voiceover';
 
 function ShellContent() {
   const { t, language, dir, toggleLanguage } = useTranslation();
   const [uploadedImages, setUploadedImages] = useState<UploadedImage[]>([]);
+  const [voiceover, setVoiceover] = useState<UploadedAudio | null>(null);
 
   // Seed scenes from Phase 2 uploaded images using pure toScenes function
   const scenes = useMemo(() => toScenes(uploadedImages), [uploadedImages]);
@@ -43,7 +46,10 @@ function ShellContent() {
         {/* Step 1: Upload */}
         <UploadStep onImagesChange={setUploadedImages} />
 
-        {/* Step 2 (Phase 3): Scene Canvas List */}
+        {/* Step 2 (Phase 8): optional voiceover upload */}
+        <VoiceoverStep onAudioChange={setVoiceover} />
+
+        {/* Step 3 (Phase 3): Scene Canvas List */}
         {scenes.length > 0 && <SceneListStep scenes={scenes} />}
       </main>
 

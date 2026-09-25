@@ -234,6 +234,48 @@ export const dictionary = {
     ar: 'جميع الحقوق محفوظة © Phase 3',
     en: 'All rights reserved © Phase 3',
   },
+
+  // Voiceover upload (Phase 8)
+  'voiceover.title': {
+    ar: 'أضف تعليقك الصوتي',
+    en: 'Add your voiceover',
+  },
+  'voiceover.description': {
+    ar: 'ارفع صوتك — اختياري، بصيغة MP3 أو WAV أو M4A.',
+    en: 'Upload your narration — optional, MP3, WAV, or M4A.',
+  },
+  'voiceover.chooseFile': {
+    ar: 'اختر ملف صوت',
+    en: 'Choose audio file',
+  },
+  'voiceover.fileInputAria': {
+    ar: 'اختيار ملف تعليق صوتي',
+    en: 'Choose a voiceover audio file',
+  },
+  'voiceover.play': {
+    ar: 'تشغيل',
+    en: 'Play',
+  },
+  'voiceover.pause': {
+    ar: 'إيقاف مؤقت',
+    en: 'Pause',
+  },
+  'voiceover.remove': {
+    ar: 'إزالة ملف الصوت',
+    en: 'Remove audio file',
+  },
+  'voiceover.error.invalidType': {
+    ar: 'صيغة الملف غير مدعومة — استخدم MP3 أو WAV أو M4A.',
+    en: 'Unsupported file format — use MP3, WAV, or M4A.',
+  },
+  'voiceover.error.fileTooLarge': {
+    ar: 'حجم الملف كبير جدًا (الحد الأقصى 50 ميجابايت).',
+    en: 'File is too large (50MB maximum).',
+  },
+  'voiceover.error.decodeFailed': {
+    ar: 'تعذّر قراءة ملف الصوت — جرّب ملفًا آخر.',
+    en: 'Could not read this audio file — try a different one.',
+  },
 } as const satisfies Dictionary;
 
 export type TranslationKey = keyof typeof dictionary;
