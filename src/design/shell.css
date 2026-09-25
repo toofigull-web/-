@@ -1,0 +1,462 @@
+/* Plain CSS styles for App Shell and UI Primitives (No Tailwind) */
+
+/* App Shell Layout */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Cairo', system-ui, sans-serif;
+}
+
+/* Header */
+.app-header {
+  width: 100%;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.025em;
+  user-select: none;
+}
+
+.header-version {
+  font-size: 0.75rem;
+  padding: 0.125rem 0.625rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  background-color: var(--surface2);
+  color: var(--dim);
+  border: 1px solid var(--line);
+}
+
+.lang-badge {
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.125rem 0.375rem;
+  border-radius: 4px;
+  background-color: var(--soft);
+  color: var(--ink);
+  margin-inline-start: 0.5rem;
+}
+
+/* Main Content */
+.app-main {
+  flex: 1;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section {
+  width: 100%;
+  max-width: 42rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: var(--surface2);
+  color: var(--brand);
+  border: 1px solid var(--line);
+}
+
+.status-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--brand);
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--dim);
+  max-width: 36rem;
+  margin: 0;
+}
+
+.primitives-container {
+  width: 100%;
+  max-width: 42rem;
+}
+
+.primitives-header {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.primitives-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+}
+
+.primitives-subtitle {
+  font-size: 0.8125rem;
+  color: var(--dim);
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.controls-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+/* Footer */
+.app-footer {
+  width: 100%;
+  border-top: 1px solid var(--line);
+  padding: 1.5rem 0;
+  background-color: var(--surface);
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: var(--dim);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-link {
+  color: var(--dim);
+  text-decoration: none;
+  cursor: default;
+  transition: color 0.15s ease;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* UI Primitives */
+
+/* Button */
+.ui-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-weight: 600;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+}
+
+.ui-btn:focus-visible {
+  outline: 2px solid var(--brand2);
+  outline-offset: 2px;
+}
+
+.ui-btn-sm {
+  font-size: 0.75rem;
+  padding: 0.375rem 0.75rem;
+  min-height: 32px;
+}
+
+.ui-btn-md {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  min-height: 40px;
+}
+
+.ui-btn-lg {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  min-height: 48px;
+}
+
+.ui-btn-full {
+  width: 100%;
+}
+
+.ui-btn-primary {
+  background-color: var(--brand);
+  color: var(--surface);
+  border-color: transparent;
+  box-shadow: var(--shadow);
+}
+
+.ui-btn-primary:hover:not(:disabled) {
+  background-color: var(--brand2);
+}
+
+.ui-btn-secondary {
+  background-color: var(--surface2);
+  color: var(--text);
+  border-color: var(--line);
+}
+
+.ui-btn-secondary:hover:not(:disabled) {
+  background-color: var(--line);
+}
+
+.ui-btn-danger {
+  background-color: var(--danger);
+  color: var(--surface);
+  border-color: transparent;
+}
+
+.ui-btn-ghost {
+  background-color: transparent;
+  color: var(--text);
+  border-color: transparent;
+}
+
+.ui-btn:disabled {
+  background-color: var(--surface2);
+  color: var(--dim);
+  border-color: var(--line);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Card */
+.ui-card {
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  color: var(--text);
+  transition: all 0.15s ease;
+}
+
+.ui-card-elevated {
+  background-color: var(--surface);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+}
+
+.ui-card-outline {
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.ui-card-flat {
+  background-color: var(--surface2);
+  border: 1px solid transparent;
+}
+
+/* Toggle */
+.ui-toggle-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.ui-toggle-wrapper.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ui-toggle-track {
+  position: relative;
+  display: inline-flex;
+  height: 1.5rem;
+  width: 2.75rem;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  padding: 0;
+}
+
+.ui-toggle-track:focus-visible {
+  outline: 2px solid var(--brand2);
+  outline-offset: 2px;
+}
+
+.ui-toggle-track.checked {
+  background-color: var(--brand);
+}
+
+.ui-toggle-track.unchecked {
+  background-color: var(--line);
+}
+
+.ui-toggle-thumb {
+  pointer-events: none;
+  display: inline-block;
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 9999px;
+  background-color: var(--surface);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+/* RTL-aware toggle thumb movement */
+[dir='rtl'] .ui-toggle-thumb.checked {
+  transform: translateX(-1.25rem);
+}
+[dir='ltr'] .ui-toggle-thumb.checked {
+  transform: translateX(1.25rem);
+}
+.ui-toggle-thumb.unchecked {
+  transform: translateX(0);
+}
+
+.ui-toggle-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+/* Slider */
+.ui-slider-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.ui-slider-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.ui-slider-value {
+  font-size: 0.75rem;
+  font-family: monospace;
+  color: var(--dim);
+}
+
+.ui-slider-input {
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.ui-slider-input:focus-visible {
+  outline: 2px solid var(--brand2);
+  outline-offset: 2px;
+}
+
+/* Responsive Media Queries (~390px mobile, ~1280px desktop) */
+@media (max-width: 640px) {
+  .header-container {
+    padding: 0 1rem;
+    height: 3.5rem;
+  }
+
+  .app-main {
+    padding: 2rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-description {
+    font-size: 0.9375rem;
+  }
+
+  .controls-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .footer-links {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
